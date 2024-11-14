@@ -42,12 +42,10 @@
 
         <!-- MySQL Driver (for connecting to MySQL database) -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
-            <scope>runtime</scope>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.2</version> <!-- Asegúrate de utilizar la versión más reciente -->
         </dependency>
-
         <!-- Lombok (optional, for reducing boilerplate code) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
