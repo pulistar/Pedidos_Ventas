@@ -1,13 +1,14 @@
 package pedidosyventas.pedidosyventasdemo;
 
+import com.example.ordersservice.OrdersServiceApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-@SpringBootTest(classes = PedidosyventasdemoApplication.class)
 
+@SpringBootTest(classes = OrdersServiceApplication.class)
 class PedidosyventasdemoApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
