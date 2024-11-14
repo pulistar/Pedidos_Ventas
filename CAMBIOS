@@ -1,0 +1,22 @@
+ DTOs
+ PedidoDTO no está completo en los detalles obtenidos. Es importante que este DTO también incluya una lista de productos o detalles de pedidos, dado que un pedido contiene varios productos.
+
+Order.java:
+El campo products está mal definido. Actualmente, está mapeado como una lista de Product, pero en realidad debería ser una lista de OrderDetail o similar,
+ ya que cada pedido tiene productos asociados junto con información adicional, como cantidad y precio.
+
+La relación debería ser con una tabla de OrderDetail (Detalles del Pedido), no directamente con Product, para respetar la estructura.
+
+Además, Order debería tener una relación de ManyToOne con la entidad Customer, para reflejar la relación entre un pedido y un cliente.
+
+
+Relación incorrecta entre Pedido y Producto:
+
+introducir una entidad intermedia llamada OrderDetail para almacenar la relación entre Pedido y Producto,
+ ya que un pedido puede tener múltiples productos, cada uno con diferentes cantidades y precios.
+
+Modificar Order.java para reflejar la relación con OrderDetail en lugar de directamente con Product.
+
+Uso de DTOs:
+los DTOs reflejan correctamente las relaciones entre entidades.
+Por ejemplo, PedidoDTO debería incluir una lista de productos, pero debería ser un campo que refleje la entidad de OrderDetail en lugar de Product directamente.
